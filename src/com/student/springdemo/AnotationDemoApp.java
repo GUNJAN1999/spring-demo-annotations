@@ -8,8 +8,8 @@ public class AnotationDemoApp {
 		// TODO read spring config file
 		ClassPathXmlApplicationContext context=new
 				ClassPathXmlApplicationContext("applicationContext.xml");
-		// TODO 
-		Coach theCoach=context.getBean("thatSillyCoach",Coach.class);
+		// TODO get the bean from spring container
+		Coach theCoach=context.getBean("tennisCoach",Coach.class);
 		System.out.println(theCoach.getDailyWorkout());
 		context.close();
 		
