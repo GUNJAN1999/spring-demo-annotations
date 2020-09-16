@@ -1,15 +1,34 @@
 package com.student.springdemo;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+
 public class TennisCoach implements Coach {
 	
 	@Autowired
 	@Qualifier("randomService")
 	private FortuneService fortuneService;
+	
+
+	@PostConstruct
+	public void start()
+	{
+		System.out.println(">>DOING START UP ACTIVITIES----");
+	}
+	//TODO define destroy method
+	
+	@PreDestroy
+	public void ending()
+	{
+		System.out.println(">>DOING CLEAN UP ACTIVITIES----");
+	}
 	/*
 	@Autowired
 	public TennisCoach(FortuneService fortune)
