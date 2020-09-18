@@ -9,14 +9,16 @@ public class SwimJavaConfigDemoApp {
 		AnnotationConfigApplicationContext context=new
 				AnnotationConfigApplicationContext(SportConfig.class);
 		// TODO get the bean from spring container
-		Coach theCoach=context.getBean("swimCoach",Coach.class);
+		SwimCoach theCoach=context.getBean("swimCoach",SwimCoach.class);
 		//TODO call method on the bean
 		System.out.println(theCoach.getDailyWorkout());
 		System.out.println(theCoach.getDailyFortune());
-		//TODO close the context 
-		context.close();
+		System.out.println("the name is: "+theCoach.getName());
+		System.out.println("the email is: "+theCoach.getEmail());
+		System.out.println("the team name is: "+theCoach.getTeam());
 		
-
+		//TODO close the context 
+		context.close();	
 	}
 
 }
