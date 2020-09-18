@@ -2,7 +2,7 @@ package com.student.springdemo;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class JavaConfigDemoApp {
+public class SwimJavaConfigDemoApp {
 
 	public static void main(String[] args) {
 		// TODO read spring config java class 
